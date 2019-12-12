@@ -46,7 +46,7 @@ def intent_handler_paired(request):
 
     if l.status_code == 200:
         response = l.json()
-        return text_response('Your paired amplifier id {} %'.format(response['amplifier'])), 200
+        return text_response('Your paired amplifier id {}'.format(response['amplifier'])), 200
 
     return text_response('Error while setting volume. Did you pair your amplifier. You can do it by saying or texting "Pair new amplifier <id>"'), 200
 
